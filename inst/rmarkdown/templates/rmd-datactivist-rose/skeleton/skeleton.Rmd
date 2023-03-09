@@ -1,0 +1,95 @@
+---
+title: "Titre du document"
+author: "Auteur"
+date: "`r format(Sys.time(), '%d %B %Y')`"
+output:
+    rmarkdown::html_document:
+      #number_sections: true
+      theme: paper
+      toc: true
+      toc_depth: 4
+      collapsed: true
+      smooth_scroll: true
+      css: styles.css
+      includes:
+        in_header: header.html
+        after_body: footer.html
+---
+
+```{r setup, include=FALSE}
+# Paramètres généraux
+knitr::opts_chunk$set(eval = TRUE,
+                      echo = FALSE,
+                      fig.align = "center",
+                      fig.show = "hold",
+                      message = FALSE,
+                      warning = FALSE,
+                      collapse = TRUE,
+                      results = 'asis', # important dfSummary
+                      out.width = "100%")
+
+# Couleur arrière-plan des graphs rosée
+library(thematic)
+thematic_on(bg = "#FFF1EB")
+```
+
+```{r logo}
+htmltools::img(src = "https://nextcloud.datactivist.coop/s/o53wzfMNnFosQni/preview", 
+               alt = 'logo', 
+               style = 'position:absolute; top:0; left:0.5; padding-top:10px;') #padding=taille des espaces autour
+```
+
+# Une première section
+
+## Titre de niveau 2
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede. Praesent blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh. Mauris ac mauris sed pede pellentesque fermentum. Maecenas adipiscing ante non diam sodales hendrerit. 
+
+## Les petites astuces
+
+Quelques paramètres à changer si vous voulez un R Markdown légèrement différent : 
+
+- `<br>` saute une ligne entre 2 éléments 
+- `number_sections: true` dans l'en-tête de ce document numérote automatiquement les parties et sous-parties (retirer le `#` dans l'en-tête pour l'utiliser)
+- `toc: false` supprime la table des matières (table of contents, *toc*) qui s'affiche par défaut au début du document avec une profondeur maximale de 4 actuellement
+- `date: "1er janvier 2023"` affiche une date fixe car entrée comme un texte. Actuellement c'est la date du jour où le rapport est généré qui apparaît automatiquement dans l'en-tête du document
+- **texte en gras**, *texte en italique*, ***texte en gras italique***
+
+# Une deuxième section divisée en 3
+
+<div class = "row">
+  
+<div class = "col-md-4">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.
+</div>
+  
+<div class = "col-md-4">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.
+</div>
+  
+<div class = "col-md-4">
+```{r graph}
+library(tidyverse)
+ggplot( mtcars, aes(x=mpg)) + 
+  geom_histogram(fill="skyblue", alpha=0.5) + 
+  theme_minimal()
+```
+</div>
+</div>
+
+## Faire ressortir du texte dans une boxe
+
+
+<br>
+
+<style>
+div.blue { background-color:white; border-radius: 5px; padding: 20px;}
+</style>
+<div class = "blue">
+
+**Ma boxe**
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim.
+
+</div>
+
