@@ -12,8 +12,8 @@ output:
       smooth_scroll: true
       css: styles.css
       includes:
-        in_header: header.html
-        after_body: footer.html
+        in_header: !expr here::here("inst/rmarkdown/resources/header.html")
+        after_body: !expr here::here("inst/rmarkdown/resources/footer.html")
 ---
 
 ```{r setup, include=FALSE}
@@ -25,11 +25,12 @@ knitr::opts_chunk$set(eval = TRUE,
                       message = FALSE,
                       warning = FALSE,
                       collapse = TRUE,
-                      results = 'asis', # important dfSummary
+                      results = 'asis',  # pour un dfSummary propre
                       out.width = "100%")
 ```
 
 ```{r logo}
+# Logo Datactivist haut de page
 htmltools::img(src = "https://nextcloud.datactivist.coop/s/o53wzfMNnFosQni/preview", 
                alt = 'logo', 
                style = 'position:absolute; top:0; left:0.5; padding-top:10px;') #padding=taille des espaces autour

@@ -12,8 +12,8 @@ output:
       smooth_scroll: true
       css: styles.css
       includes:
-        in_header: !expr here::here("inst/rmarkdown/resources/header.html")
-        after_body: !expr here::here("inst/rmarkdown/resources/footer.html")
+        in_header: header.html
+        after_body: footer.html
 ---
 
 ```{r setup, include=FALSE}
@@ -25,12 +25,8 @@ knitr::opts_chunk$set(eval = TRUE,
                       message = FALSE,
                       warning = FALSE,
                       collapse = TRUE,
-                      results = 'asis',  # pour un dfSummary propre
+                      results = 'asis', # pour un dfSummary propre
                       out.width = "100%")
-
-# Couleur arrière-plan des graphs rosée
-library(thematic)
-thematic_on(bg = "#FFF1EB")
 ```
 
 ```{r logo}
@@ -84,7 +80,7 @@ ggplot( mtcars, aes(x=mpg)) +
 <br>
 
 <style>
-div.blue { background-color:white; border-radius: 5px; padding: 20px;}
+div.blue { background-color:#fff1eb; border-radius: 5px; padding: 20px;}
 </style>
 <div class = "blue">
 
