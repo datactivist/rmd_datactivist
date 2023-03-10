@@ -8,15 +8,6 @@ h1.title { /*titre général du document*/
   padding-top: 60px; /*espace avant titre*/
   margin-top: 30px; /*marge à 0*/
 }
-h3.subtitle{
-  color: #666666; /*couleur titre*/
-  font-size: 2.5em; /*taille*/
-  font-family: "Montserrat"; /*police*/
-  font-weight: bold; /*gras*/
-  padding-left: 0px; /*tout à gauche, pas d'alinéa*/
-  padding-top: 0px; /*espace avant titre*/
- 
-}
 h4.author { /*auteur et date #4*/
   color: #173541; /*couleur*/
   padding: 1px; /*espace autour texte*/
@@ -76,5 +67,4 @@ body { /*corps de texte*/
   font-family: "Open Sans Regular"; /*police*/
   letter-spacing: 0px; /*pas d'espace entre les lettres*/
   list-style: disc inside; /*listes en bullet-points*/
-  background-color: #FFF1EB; /*couleur de fond rosée*/
 }

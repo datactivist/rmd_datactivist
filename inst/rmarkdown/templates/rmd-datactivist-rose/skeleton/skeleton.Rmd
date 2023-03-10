@@ -1,5 +1,6 @@
 ---
 title: "Titre du document"
+subtitle: "Sous-titre du document"
 author: "Auteur"
 date: "`r format(Sys.time(), '%d %B %Y')`"
 output:
@@ -12,8 +13,8 @@ output:
       smooth_scroll: true
       css: styles.css
       includes:
-        in_header: !expr here::here("inst/rmarkdown/resources/header.html")
-        after_body: !expr here::here("inst/rmarkdown/resources/footer.html")
+        in_header: header.html
+        after_body: footer.html
 ---
 
 ```{r setup, include=FALSE}

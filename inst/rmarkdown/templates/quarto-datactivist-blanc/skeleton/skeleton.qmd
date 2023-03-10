@@ -2,8 +2,8 @@
 title: "Titre du document"
 author: "Auteur"
 date: "`r format(Sys.time(), '%d %B %Y')`"
-output:
-    rmarkdown::html_document:
+format:
+    html:
       #number_sections: true
       theme: paper
       toc: true
@@ -14,22 +14,26 @@ output:
       includes:
         in_header: header.html
         after_body: footer.html
+execute:
+  echo: false
+  eval: true
+  message: false
+  warning: false
+  collapse: true
 ---
 
-```{r setup, include=FALSE}
+```{r}
+#| label: "setup"
+#| include: false
 # Paramètres généraux
-knitr::opts_chunk$set(eval = TRUE,
-                      echo = FALSE,
-                      fig.align = "center",
+knitr::opts_chunk$set(fig.align = "center",
                       fig.show = "hold",
-                      message = FALSE,
-                      warning = FALSE,
-                      collapse = TRUE,
                       results = 'asis',  # pour un dfSummary propre
                       out.width = "100%")
 ```
 
-```{r logo}
+```{r}
+#| label: "logo"
 # Logo Datactivist haut de page
 htmltools::img(src = "https://nextcloud.datactivist.coop/s/o53wzfMNnFosQni/preview", 
                alt = 'logo', 
@@ -65,7 +69,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendi
 </div>
   
 <div class = "col-md-4">
-```{r graph}
+```{r}
+#| label: "graph"
 library(tidyverse)
 ggplot( mtcars, aes(x=mpg)) + 
   geom_histogram(fill="skyblue", alpha=0.5) + 
