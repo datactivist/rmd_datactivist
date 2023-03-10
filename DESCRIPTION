@@ -1,4 +1,4 @@
-Package: htmlDatactivist
+Package: rmdDatactivist
 Type: Package
 Title: Templates de Rmd pour Datactivist
 Version: 0.1.0
