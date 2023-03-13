@@ -1,5 +1,6 @@
 ---
 title: "Titre du document"
+subtitle: "Sous-titre du document"
 author: "Auteur"
 date: "`r format(Sys.time(), '%d %B %Y')`"
 output:
@@ -18,15 +19,17 @@ output:
 
 ```{r setup, include=FALSE}
 # Paramètres généraux
-knitr::opts_chunk$set(eval = TRUE,
-                      echo = FALSE,
-                      fig.align = "center",
-                      fig.show = "hold",
-                      message = FALSE,
-                      warning = FALSE,
-                      collapse = TRUE,
-                      results = 'asis',  # pour un dfSummary propre
-                      out.width = "100%")
+knitr::opts_chunk$set(
+	eval = TRUE,
+	echo = FALSE,
+	fig.align = "center",
+	fig.show = "hold",
+	message = FALSE,
+	warning = FALSE,
+	collapse = TRUE,
+	out.width = "100%",
+	results = "asis"
+)
 ```
 
 ```{r logo}

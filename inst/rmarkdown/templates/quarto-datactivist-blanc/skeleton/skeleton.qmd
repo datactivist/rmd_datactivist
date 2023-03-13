@@ -1,29 +1,29 @@
 ---
 title: "Titre du document"
+subtitle: "Sous-titre du document"
 author: "Auteur"
 date: "`r format(Sys.time(), '%d %B %Y')`"
 format:
-    html:
-      #number_sections: true
-      theme: paper
-      toc: true
-      toc_depth: 4
-      collapsed: true
-      smooth_scroll: true
-      css: styles.css
-      includes:
-        in_header: header.html
-        after_body: footer.html
-execute:
-  echo: false
+  html:
+    toc: true #table de matières..
+    toc-location: body #..en corps de texte
+    toc-title: Table des matières #titre de la toc
+    css: styles.css
+    theme: paper
+    include-in-header: header.html
+    include-after-body: footer.html
+    embed-resources: true #self-cntained=true
+execute: 
   eval: true
+  echo: false
   message: false
   warning: false
+  error: false
   collapse: true
 ---
 
 ```{r}
-#| label: "setup"
+#| label: setup
 #| include: false
 # Paramètres généraux
 knitr::opts_chunk$set(fig.align = "center",
@@ -33,7 +33,8 @@ knitr::opts_chunk$set(fig.align = "center",
 ```
 
 ```{r}
-#| label: "logo"
+#| label: logo
+#| echo: false
 # Logo Datactivist haut de page
 htmltools::img(src = "https://nextcloud.datactivist.coop/s/o53wzfMNnFosQni/preview", 
                alt = 'logo', 
@@ -44,7 +45,16 @@ htmltools::img(src = "https://nextcloud.datactivist.coop/s/o53wzfMNnFosQni/previ
 
 ## Titre de niveau 2
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede. Praesent blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh. Mauris ac mauris sed pede pellentesque fermentum. Maecenas adipiscing ante non diam sodales hendrerit. 
+::: {.panel-tabset}
+### Tab 1
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim.
+
+### Tab 2
+
+Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede. Praesent blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh. Mauris ac mauris sed pede pellentesque fermentum. Maecenas adipiscing ante non diam sodales hendrerit. 
+
+:::
 
 ## Les petites astuces
 
@@ -95,3 +105,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendi
 
 </div>
 
+
+```{r}
+#| label: "graph2"
+#| code-fold: show
+#| code-summary: "Show the code"
+library(tidyverse)
+ggplot( mtcars, aes(x=mpg)) + 
+  geom_histogram(fill="skyblue", alpha=0.5) + 
+  theme_minimal()
+```

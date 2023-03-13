@@ -1,21 +1,21 @@
 h1.title { /*titre général du document*/
   color: #173541; /*couleur titre*/
-  font-size: 3.8em; /*taille*/
+  font-size: 3.5em; /*taille*/
   font-family: "Montserrat"; /*police*/
   font-weight: bold; /*gras*/
   border-top: 0px; /*pas de ligne horizontale avant*/
   padding-left: 0px; /*tout à gauche, pas d'alinéa*/
   padding-top: 60px; /*espace avant titre*/
-  margin-top: 30px; /*marge à 0*/
+  margin-top: 10px; /*marge à 0*/
 }
-h4.author { /*auteur et date #4*/
+h4.author { /*auteur*/
   color: #173541; /*couleur*/
   padding: 1px; /*espace autour texte*/
   font-size: 1.5em; /*taille*/
   font-family: "Open Sans Regular"; /*police*/
   font-weight: normal; /*pas en gras*/
 }
-h4.date { /*auteur et date #4*/
+h4.date { /*date*/
   color: #173541; /*couleur*/
   padding: 1px; /*espace autour texte*/
   padding-bottom: 10px;
@@ -39,6 +39,7 @@ h2 { /*titre de niveau #2*/
   font-size: 2.5em; /*taille*/
   font-family: "Montserrat"; /*police*/
   font-weight: bold; /*gras*/
+  border-bottom: 0px; /*pas de ligne horizontale après*/
   padding: 35px; /*alinéa*/
 }
 h3 { /*titre de niveau #3*/
@@ -67,4 +68,8 @@ body { /*corps de texte*/
   font-family: "Open Sans Regular"; /*police*/
   letter-spacing: 0px; /*pas d'espace entre les lettres*/
   list-style: disc inside; /*listes en bullet-points*/
+  font-size: 0.8em; /*taille*/
+}
+#quarto-document-content {
+  width: 900px; /*largeur du corps de texte agrandie, defaut à 800*/
 }
