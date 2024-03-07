@@ -21,7 +21,8 @@ remotes::install_github('datactivist/rmd_datactivist')
 
 Créer un nouveau document R Markdown à partir du menu :
 
-- *File -> New File -> R Markdown -> From Template -> RMD Datactivist blanc* pour un document avec un arrière-plan blanc ;
-- *File -> New File -> R Markdown -> From Template -> RMD Datactivist rose* pour un document avec un arrière-plan rosé.
+- *File -> New File -> R Markdown -> From Template -> RMD Datactivist blanc* pour un document à la charte Datactivist avec un arrière-plan blanc ;
+- *File -> New File -> R Markdown -> From Template -> RMD Datactivist rose* pour un document à la charte Datactivist avec un arrière-plan rosé.
+- *File -> New File -> R Markdown -> From Template -> RMD Datapublica blanc* pour un document à la charte Datapublica avec un arrière-plan blanc.
 
-Un exemple de R Markdown à la charte Datactivist s'ouvrira, appuyer sur le bouton '*knit*' pour compiler et visualiser la page HTML.
+Un exemple de R Markdown avec la charte choisie s'ouvrira, appuyer sur le bouton '*knit*' pour compiler et visualiser la page HTML.

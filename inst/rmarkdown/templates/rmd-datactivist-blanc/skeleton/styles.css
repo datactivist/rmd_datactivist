@@ -1,3 +1,14 @@
+/* define fonts */
+@font-face {
+  font-family: "Montserrat";
+  src: url("fonts/Montserrat-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: "Open Sans Regular";
+  src: url("fonts/OpenSans-VariableFont_wdth,wght.ttf");
+}
+
 h1.title { /*titre général du document*/
   color: #173541; /*couleur titre*/
   font-size: 3.8em; /*taille*/
@@ -6,7 +17,7 @@ h1.title { /*titre général du document*/
   border-top: 0px; /*pas de ligne horizontale avant*/
   padding-left: 0px; /*tout à gauche, pas d'alinéa*/
   padding-top: 60px; /*espace avant titre*/
-  margin-top: 30px; /*marge à 0*/
+  margin-top: 30px; /*marge*/
 }
 h3.subtitle{ /*sous-titre*/
   color: #666666; /*couleur titre*/
@@ -37,7 +48,7 @@ h1 { /*titre de niveau #1*/
   font-family: "Montserrat"; /*police*/
   font-weight: bold; /*gras*/
   border-top: .8px solid #CCCCCC; /*ligne horizontale avant titre*/
-  padding-left: 50px; /*alinéa, espace à gauche du titre*/
+  padding-left: 0px; /*alinéa, espace à gauche du titre*/
   padding-top: 30px; /*espace avant titre*/
   padding-bottom: 0px; /*espace après titre*/
   margin-top: 50px; /*espace avant ligne horizontale*/
@@ -48,6 +59,7 @@ h2 { /*titre de niveau #2*/
   font-family: "Montserrat"; /*police*/
   font-weight: bold; /*gras*/
   padding: 35px; /*alinéa*/
+  padding-left: 0px; /*alinéa, espace à gauche du titre*/
 }
 h3 { /*titre de niveau #3*/
   color: #E95459; /*couleur titre*/
@@ -55,6 +67,7 @@ h3 { /*titre de niveau #3*/
   font-family: "Montserrat"; /*police*/
   font-weight: bold; /*gras*/
   padding: 25px; /*alinéa*/
+  padding-left: 0px; /*alinéa, espace à gauche du titre*/
 }
 h4 { /*titre de niveau #4*/
   color: #E95459; /*couleur titre*/
@@ -62,6 +75,7 @@ h4 { /*titre de niveau #4*/
   font-family: "Montserrat"; /*police*/
   font-weight: bold; /*gras*/
   padding: 15px; /*alinéa*/
+  padding-left: 0px; /*alinéa, espace à gauche du titre*/
 }
 h5 { /*titre de niveau #5*/
   color: #E95459; /*couleur titre*/
@@ -69,6 +83,7 @@ h5 { /*titre de niveau #5*/
   font-family: "Montserrat"; /*police*/
   font-weight: bold; /*gras*/
   padding: 5px; /*alinéa*/
+  padding-left: 0px; /*alinéa, espace à gauche du titre*/
 }
 body { /*corps de texte*/
   text-align: justify; /*texte justifié*/
