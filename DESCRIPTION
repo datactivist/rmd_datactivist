@@ -1,7 +1,7 @@
 Package: rmdDatactivist
 Type: Package
 Title: Templates de documents R Markdown pour Datactivist
-Version: 0.1.0
+Version: 0.2.0
 Authors@R: person("Thierry", "Diane", role = c("aut", "cre"), email = "diane@datactivist.coop")
 Description: More about what it does (maybe more than one line)
     Use four spaces when indenting paragraphs within the Description.
