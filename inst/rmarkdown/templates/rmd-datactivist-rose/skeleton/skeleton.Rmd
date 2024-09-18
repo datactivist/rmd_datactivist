@@ -1,18 +1,18 @@
 ---
 title: "Titre du document"
 subtitle: "Sous-titre du document"
-author: "Auteur"
 date: "`r format(Sys.time(), '%d %B %Y')`"
 output:
-    rmarkdown::html_document:
-      #number_sections: true
-      theme: paper
-      toc: true
-      toc_depth: 4
-      collapsed: true
-      smooth_scroll: true
-      css: styles.css
-      includes:
+  html_document:
+    theme: paper
+    number_sections: true
+    highlight: textmate
+    toc: true
+    toc_float: true
+    toc_depth: 4
+    code_folding: hide
+    css: styles.css
+    includes:
         in_header: header.html
         after_body: footer.html
 ---
@@ -20,7 +20,7 @@ output:
 ```{r setup, include=FALSE}
 # Paramètres généraux
 knitr::opts_chunk$set(eval = TRUE,
-                      echo = FALSE,
+                      echo = TRUE,
                       fig.align = "center",
                       fig.show = "hold",
                       message = FALSE,

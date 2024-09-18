@@ -39,7 +39,7 @@ h4.date { /*date*/
   color: #173541; /*couleur*/
   padding: 1px; /*espace autour texte*/
   padding-bottom: 10px;
-  font-size: 1.5em; /*taille*/
+  font-size: 1.2em; /*taille*/
   font-family: "Open Sans Regular"; /*police*/
   font-weight: normal; /*pas en gras*/
 }
@@ -48,7 +48,6 @@ h1 { /*titre de niveau #1*/
   font-size: 3em; /*taille*/
   font-family: "Montserrat"; /*police*/
   font-weight: bold; /*gras*/
-  border-top: .8px solid #CCCCCC; /*ligne horizontale avant titre*/
   padding-left: 0px; /*alinéa, espace à gauche du titre*/
   padding-top: 30px; /*espace avant titre*/
   padding-bottom: 0px; /*espace après titre*/
@@ -92,4 +91,13 @@ body { /*corps de texte*/
   letter-spacing: 0px; /*pas d'espace entre les lettres*/
   list-style: disc inside; /*listes en bullet-points*/
   background-color: #FFF1EB; /*couleur de fond rosée*/
+}
+a:link { /*lien hyper texte*/
+    color: ##2196F3;
+}
+a:hover { /*souris au-dessus du lien hyper texte*/
+    color: ##2196F3;
+}
+a:visited { /*lien visité*/
+    color: ##2196F3;
 }
